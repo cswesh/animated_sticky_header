@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated Sticky Header</title>
+</head>
+<body>
+    <header>
+        <img src="bg.jpg" class="banner" alt="">
+        <a href="#" class="logo">Swesh</a>
+        <div class="toggle"></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <section>
+        <h2>Fullscreen header with animation</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem necessitatibus tempore id nesciunt. Quaerat natus alias suscipit fugit voluptates nam! Tempora quasi sit perferendis recusandae modi minima, nemo dolores cum facilis quisquam eos voluptas eaque quos, facere saepe consequatur id laborum aliquid, fuga sint? Ducimus, quis at corporis ex itaque obcaecati cumque repellendus rem nobis voluptatum officiis pariatur molestiae ab doloremque veniam praesentium sapiente animi quos, tenetur id facilis ut dolorum consequuntur temporibus. Dignissimos corporis odit animi porro distinctio nostrum molestiae et iure, dolore nihil, voluptatibus debitis. Vero, delectus illum! Dicta veniam incidunt voluptatum sapiente temporibus praesentium impedit velit cumque vitae suscipit debitis quisquam porro, ipsa fugit neque numquam doloremque, quod magni ad repellat eaque beatae adipisci? Atque ut nobis fugiat corporis repudiandae. Recusandae ipsum et aliquam doloremque, rem temporibus maiores tenetur in culpa modi libero repudiandae, accusantium enim earum illo reprehenderit, voluptatum vero eum laboriosam quisquam? Qui neque, ipsum, dicta laborum odit modi debitis molestias facere tenetur minus vero nam ea accusantium voluptatem molestiae ut quas porro nobis quos maxime ex doloribus dolore commodi quisquam! Beatae similique quae consequatur vel odit impedit id harum voluptate cumque earum nulla dicta eum inventore, neque sapiente optio debitis magnam deleniti corrupti. Corrupti.</p>
+    </section>
+    <script>
+        window.addEventListener("scroll",function(){
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky',window.scrollY > 0);
+        });
+        const navigation = document.querySelector('nav');
+        document.querySelector(".toggle").onclick = function(){
+            this.classList.toggle("active");
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
